@@ -2,7 +2,7 @@
 Library for postgresql
         libpqxx
     Install:
-        sudo apt-get install libpqcxx-dev
+        sudo apt-get install libpqxx-dev
 
 Library for unzipping
         libzip

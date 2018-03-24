@@ -9,7 +9,7 @@ std::vector<std::string> split(std::string str, char delimiter){
     for(std::size_t i = 0; i < str.size(); i++){
         if(str[i] == delimiter){
             ret.push_back(str.substr(cur_start, i - cur_start));
-            cur_start = i;
+            cur_start = i + 1;
         }
     }
     ret.push_back(str.substr(cur_start));

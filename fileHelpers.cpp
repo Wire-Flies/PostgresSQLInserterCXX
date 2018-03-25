@@ -1,7 +1,7 @@
 #include "fileHelpers.hpp"
 #include <experimental/filesystem>
 namespace fs = std::experimental::filesystem;
-
+#include <iostream>
 
 std::vector<std::string> split(std::string str, char delimiter){
     std::vector<std::string> ret;

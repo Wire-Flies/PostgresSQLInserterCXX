@@ -28,7 +28,7 @@ std::vector<data_item> readZipFile(const std::string & path){
 
         std::string str(data, stat.size);
         std::vector<std::string> lines = split(str, '\n');
-        std::string flight_id_str = split(stat.name, '_')[1].substr(1);
+        std::string flight_id_str = split(stat.name, '_')[1];
         ull flight_id = std::atoll(flight_id_str.substr(0, flight_id_str.size() - 4).c_str());
         unsigned int line_n = 0;
         for(std::string line : lines){

@@ -44,6 +44,10 @@ void pgconn::reset_db(){
 void pgconn::add_indexes(){
     pqxx::work work(*conn);
     work.exec("CREATE INDEX flight_id_index ON flight_data (flight_id);");
+    work.exec("CREATE INDEX flight_snapshot_index ON flight_data (snapshot_id);");
+    //work.exec("CREATE INDEX flight_schd_from_index ON flight_data (schd_from);")
+    //work.exec("CREATE INDEX flight_schd_to_index ON flight_data (schd_to);");
+    //work.exec("")
     work.commit();
 }
 

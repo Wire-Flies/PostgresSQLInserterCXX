@@ -42,7 +42,7 @@ void pgconn::reset_db(){
 }
 
 void pgconn::add_indexes(){
-    pwxx::work work(*conn);
+    pqxx::work work(*conn);
     work.exec("CREATE INDEX flight_id_index ON flight_data (flight_id);");
     work.commit();
 }
